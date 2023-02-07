@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.fragment_riwayat">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinmedium"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
+        android:text="Riwayat"
+        android:textSize="20dp"
+        android:textColor="#27231F"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/riwayatrc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            tools:listitem="@layout/item_riwayat"
+            android:paddingLeft="22dp"/>
+
+        <TextView
+            android:id="@+id/kosong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Belum Melakukan Transaksi"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingBottom="60dp"
+            android:textColor="#27231F"
+            android:fontFamily="@font/poppinslight"/>
+    </FrameLayout>
+
+</LinearLayout>

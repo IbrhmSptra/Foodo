@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pesan.pesanActivity">
+
+    <FrameLayout
+        android:id="@+id/framel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/backbtnpesan"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:orientation="vertical"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="34dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backbtnjp"
+            android:text="Pesan Bahan"
+            android:layout_marginTop="27dp"
+            android:textSize="16dp"
+            android:textColor="#27231F"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinmedium"/>
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/et_alamat"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"
+        android:singleLine="true"
+        android:hint="Isi alamat"
+        android:textSize="15dp"
+        android:paddingTop="2dp"
+        android:drawableStart="@drawable/map"
+        android:drawablePadding="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="14dp"></EditText>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="360dp"
+        android:layout_height="620dp"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detail Harga"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppinsemibold"
+                android:textColor="#DE0001"
+                android:layout_marginTop="11dp"
+                android:paddingLeft="19dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/detailhargarc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="19dp"
+                tools:listitem="@layout/item_detailharga"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="34dp">
+
+        <LinearLayout
+            android:id="@+id/lyharga"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Bayar"
+                android:textSize="10dp"
+                android:textColor="#6F6F6F"
+                android:fontFamily="@font/poppinslight"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_totalbayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp.4000"
+                android:textSize="14dp"
+                android:textColor="#27231F"
+                android:fontFamily="@font/poppinmedium"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pesanbtn"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:src="@drawable/pesanbtn"
+            android:layout_toRightOf="@id/lyharga"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

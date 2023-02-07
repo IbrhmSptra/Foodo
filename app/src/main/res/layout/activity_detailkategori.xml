@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailKategori.Detailkategori_activity">
+
+    <FrameLayout
+        android:id="@+id/framel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/backbtnkatdetail"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:orientation="vertical"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="34dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backbtnjp"
+            android:text="Kategori"
+            android:layout_marginTop="27dp"
+            android:textSize="16dp"
+            android:textColor="#27231F"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinbold"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="370dp"
+        android:layout_height="240dp"
+        android:layout_below="@+id/framel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/frame_jepang" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/katdetailrc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        tools:listitem="@layout/item_kategoridetail"/>
+
+</RelativeLayout>

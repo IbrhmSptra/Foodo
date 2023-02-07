@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".login">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:fontFamily="@font/poppinbold"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20dp"
+        android:textColor="#27231F"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="325dp"
+        android:inputType="textEmailAddress"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Masukan Email"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:fontFamily="@font/poppinbold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:textSize="20dp"
+        android:textColor="#27231F"
+        ></TextView>
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:inputType="textPassword"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Masukan Password"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textSize="16dp"
+        android:paddingTop="7dp"
+        android:fontFamily="@font/poppinbold"
+        android:textColor="#27231F"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/shape"></Button>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:fontFamily="@font/poppinmedium"
+        android:text="Belum Punya Akun?"
+        android:textColor="#27231F"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"></TextView>
+
+    <TextView
+        android:id="@+id/daftarbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:fontFamily="@font/poppinmedium"
+        android:text="Daftar Di sini"
+        android:textColor="#DE0001"
+        android:textAlignment="center"
+        ></TextView>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navlink"
+    app:startDestination="@id/fragment_home">
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="id.kotlin.foodo.fragment.fragment_home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_pencarian3"
+            app:destination="@id/fragment_pencarian" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_pencarian"
+        android:name="id.kotlin.foodo.fragment.fragment_pencarian"
+        android:label="fragment_pencarian"
+        tools:layout="@layout/fragment_pencarian" />
+    <fragment
+        android:id="@+id/fragment_riwayat"
+        android:name="id.kotlin.foodo.fragment.fragment_riwayat"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" />
+    <fragment
+        android:id="@+id/fragment_bookmark"
+        android:name="id.kotlin.foodo.fragment.fragment_bookmark"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" />
+</navigation>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".register"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppinbold"
+        android:textColor="#27231F"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="40dp"></TextView>
+
+    <EditText
+        android:id="@+id/regusername"
+        android:maxLength="16"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Masukan Nama"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppinbold"
+        android:layout_marginTop="10dp"
+        android:textColor="#27231F"
+        android:layout_marginLeft="40dp"></TextView>
+
+    <EditText
+        android:id="@+id/regemail"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Masukan Email"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppinbold"
+        android:textColor="#27231F"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"></TextView>
+
+    <EditText
+        android:id="@+id/regpassword"
+        android:inputType="textPassword"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Masukan Password"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Re-enter Password"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppinbold"
+        android:textColor="#27231F"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"></TextView>
+
+    <EditText
+        android:id="@+id/regrepassword"
+        android:password="true"
+        android:layout_width="325dp"
+        android:layout_height="40dp"
+        android:background="@drawable/etborder"
+        android:layout_marginLeft="40dp"
+        android:hint="Konfirmasi Password"
+        android:textSize="15dp"
+        android:paddingTop="4dp"
+        android:textColor="#6F6F6F"
+        android:fontFamily="@font/poppinslight"
+        android:paddingLeft="20dp"></EditText>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="325dp"
+        android:layout_height="50dp"
+        android:text="Sign Up"
+        android:textSize="16dp"
+        android:paddingTop="7dp"
+        android:fontFamily="@font/poppinbold"
+        android:textColor="#27231F"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/shape"></Button>
+
+
+</LinearLayout>

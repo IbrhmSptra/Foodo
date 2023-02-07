@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRiwayat.detailriwayatActivity">
+
+    <FrameLayout
+        android:id="@+id/framel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/backbtnDT"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:orientation="vertical"
+            android:layout_marginTop="29dp"
+            android:layout_marginLeft="34dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/back" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backbtnDT"
+            android:text="Detail Transaksi"
+            android:layout_marginTop="27dp"
+            android:textSize="16dp"
+            android:textColor="#27231F"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppinsemibold"/>
+
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/framel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/headerDT"
+                android:layout_width="348dp"
+                android:layout_height="280dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="19dp"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:src="@drawable/rawondetail"
+                        android:scaleType="fitXY"/>
+
+                    <TextView
+                        android:id="@+id/tvfoodDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Rawon Daging Sapi"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:textColor="#27231F"
+                        android:gravity="center"
+                        android:layout_below="@+id/pic_kategori"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="348dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                app:cardCornerRadius="15dp"
+                android:layout_below="@+id/headerDT"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dikirim Ke :"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:textColor="#DE0001"
+                        android:layout_marginTop="11dp"
+                        android:paddingLeft="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tvalamatDT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jl. Pramuka Jaya VI No.33 RT/RW 006/01, Utan
+Kayu Utara, Matraman, Jakarta Timur, DKI
+Jakarta."
+                        android:textSize="11dp"
+                        android:fontFamily="@font/popinregular"
+                        android:textColor="#27231F"
+                        android:paddingLeft="16dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Detail Harga"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/poppinsemibold"
+                        android:textColor="#DE0001"
+                        android:paddingLeft="16dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/detailhargarcDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="19dp"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/item_detailharga"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/line"
+                        android:scaleType="fitCenter"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/popinregular"
+                            android:textColor="#27231F"
+                            android:paddingLeft="16dp"/>
+
+                        <TextView
+                            android:id="@+id/tv_totalDT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp.50000"
+                            android:textSize="11dp"
+                            android:fontFamily="@font/popinregular"
+                            android:textColor="#27231F"
+                            android:layout_marginLeft="230dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

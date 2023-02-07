@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Beranda"
+        android:id="@+id/fragment_home"
+        android:icon="@drawable/ic_home"></item>
+
+    <item
+        android:title="Pencarian"
+        android:id="@+id/fragment_pencarian"
+        android:icon="@drawable/ic_search"></item>
+
+    <item
+        android:title="Bookmark"
+        android:id="@+id/fragment_bookmark"
+        android:icon="@drawable/ic_bookmark"></item>
+
+    <item
+        android:title="Riwayat"
+        android:id="@+id/fragment_riwayat"
+        android:icon="@drawable/ic_riwayat"></item>
+
+</menu>
