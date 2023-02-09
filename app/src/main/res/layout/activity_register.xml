@@ -1,121 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical"
-    tools:context=".register"
-    android:background="@drawable/bg">
+    tools:context=".register">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:textSize="20dp"
         android:fontFamily="@font/poppinbold"
+        android:text="Username"
         android:textColor="#27231F"
-        android:layout_marginTop="260dp"
-        android:layout_marginLeft="40dp"></TextView>
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/regusername"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"></TextView>
 
     <EditText
         android:id="@+id/regusername"
-        android:maxLength="16"
         android:layout_width="325dp"
         android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:background="@drawable/etborder"
-        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/poppinslight"
         android:hint="Masukan Nama"
-        android:textSize="15dp"
+        android:maxLength="16"
+        android:paddingLeft="20dp"
         android:paddingTop="4dp"
         android:textColor="#6F6F6F"
-        android:fontFamily="@font/poppinslight"
-        android:paddingLeft="20dp"></EditText>
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        android:textSize="20dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinbold"
-        android:layout_marginTop="10dp"
+        android:text="Email"
         android:textColor="#27231F"
-        android:layout_marginLeft="40dp"></TextView>
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/regusername"></TextView>
 
     <EditText
         android:id="@+id/regemail"
         android:layout_width="325dp"
         android:layout_height="40dp"
-        android:inputType="textEmailAddress"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:background="@drawable/etborder"
-        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/poppinslight"
         android:hint="Masukan Email"
-        android:textSize="15dp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
         android:paddingTop="4dp"
         android:textColor="#6F6F6F"
-        android:fontFamily="@font/poppinslight"
-        android:paddingLeft="20dp"></EditText>
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:textSize="20dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinbold"
+        android:text="Password"
         android:textColor="#27231F"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"></TextView>
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/regemail"></TextView>
 
     <EditText
         android:id="@+id/regpassword"
-        android:inputType="textPassword"
         android:layout_width="325dp"
         android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:background="@drawable/etborder"
-        android:layout_marginLeft="40dp"
+        android:fontFamily="@font/poppinslight"
         android:hint="Masukan Password"
-        android:textSize="15dp"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
         android:paddingTop="4dp"
         android:textColor="#6F6F6F"
-        android:fontFamily="@font/poppinslight"
-        android:paddingLeft="20dp"></EditText>
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"></EditText>
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Re-enter Password"
-        android:textSize="20dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/poppinbold"
+        android:text="Re-enter Password"
         android:textColor="#27231F"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"></TextView>
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/regpassword"></TextView>
 
     <EditText
         android:id="@+id/regrepassword"
-        android:password="true"
         android:layout_width="325dp"
         android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
         android:background="@drawable/etborder"
-        android:layout_marginLeft="40dp"
-        android:hint="Konfirmasi Password"
-        android:textSize="15dp"
-        android:paddingTop="4dp"
-        android:textColor="#6F6F6F"
         android:fontFamily="@font/poppinslight"
-        android:paddingLeft="20dp"></EditText>
+        android:hint="Konfirmasi Password"
+        android:paddingLeft="20dp"
+        android:paddingTop="4dp"
+        android:password="true"
+        android:textColor="#6F6F6F"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"></EditText>
 
     <Button
         android:id="@+id/signup"
         android:layout_width="325dp"
         android:layout_height="50dp"
-        android:text="Sign Up"
-        android:textSize="16dp"
-        android:paddingTop="7dp"
+        android:background="@drawable/shape"
         android:fontFamily="@font/poppinbold"
+        android:paddingTop="7dp"
+        android:text="Sign Up"
         android:textColor="#27231F"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="40dp"
-        android:background="@drawable/shape"></Button>
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regrepassword"
+        app:layout_constraintVertical_bias="0.209"></Button>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
