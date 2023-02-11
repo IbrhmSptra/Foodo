@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -7,37 +8,45 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
         app:cardUseCompatPadding="true"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
         android:background="@color/white">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/pic_kategori"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/japan_item"
-                android:layout_marginTop="9dp"
-                android:layout_marginLeft="18dp"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tv_kategori"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jepang"
-                android:textSize="11dp"
-                android:fontFamily="@font/popinregular"
-                android:textColor="#27231F"
                 android:layout_below="@+id/pic_kategori"
-                android:textAlignment="center"/>
+                android:fontFamily="@font/popinregular"
+                android:text="Jepang"
+                android:textAlignment="center"
+                android:textColor="#27231F"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pic_kategori" />
 
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 "
 
 

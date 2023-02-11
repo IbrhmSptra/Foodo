@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,131 +9,146 @@
 
     <ImageView
         android:id="@+id/logout"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_toRightOf="@+id/tv_user"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="350dp"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_19sdp"
         android:src="@drawable/ic_logout"
-        />
+        app:layout_constraintBottom_toBottomOf="@+id/tv_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_user" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ic_profile"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-        <RelativeLayout
-            android:id="@+id/header"
+    <TextView
+        android:id="@+id/tv_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ic_profile"
+        android:fontFamily="@font/poppinbold"
+        android:text="User"
+        android:textColor="#27231F"
+        android:paddingTop="@dimen/_2sdp"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/ic_profile"
+        app:layout_constraintStart_toEndOf="@+id/ic_profile"
+        app:layout_constraintTop_toTopOf="@+id/ic_profile"></TextView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_profile">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/ic_profile"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/profile"></ImageView>
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/iklan"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:iss_auto_cycle="true"
+                app:iss_delay="0"
+                app:iss_error_image="@color/shape"
+                app:iss_period="3000"
+                app:iss_placeholder="@drawable/iklan_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
-                android:id="@+id/tv_user"
+                android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:layout_toRightOf="@+id/ic_profile"
-                android:text="User"
-                android:fontFamily="@font/poppinbold"
-                android:layout_marginLeft="9dp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinmedium"
+                android:text="Kategori"
                 android:textColor="#27231F"
-                android:layout_marginTop="25dp"></TextView>
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iklan" />
 
-        </RelativeLayout>
-
-
-
-
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/header">
-
-
-
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleKategori"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <com.denzcoskun.imageslider.ImageSlider
-                    android:id="@+id/iklan"
-                    android:layout_below="@+id/ic_profile"
-                    android:layout_width="363dp"
-                    android:layout_height="200dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="8dp"
-                    app:iss_auto_cycle="true"
-                    app:iss_delay="0"
-                    app:iss_period="3000"
-                    app:iss_placeholder="@drawable/iklan_1"
-                    app:iss_error_image="@color/shape"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kategori"
-                    android:textColor="#27231F"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/poppinmedium"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="24dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycleKategori"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_kategori"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Trending"
-                    android:textColor="#27231F"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinmedium"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="24dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycleTrending"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_trending"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rekomendasi"
-                    android:textColor="#27231F"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppinmedium"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="24dp"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycleRekomendasi"
-                    android:nestedScrollingEnabled="false"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_rekomendasi"/>
-
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>
-
-    </RelativeLayout>
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                tools:listitem="@layout/item_kategori" />
 
 
-</FrameLayout>
+            <TextView
+                android:id="@+id/textview10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinmedium"
+                android:text="Trending"
+                android:textColor="#27231F"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycleKategori" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleTrending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview10"
+                tools:listitem="@layout/item_trending" />
+
+            <TextView
+                android:id="@+id/textview11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/poppinmedium"
+                android:text="Rekomendasi"
+                android:textColor="#27231F"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycleTrending" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleRekomendasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview11"
+                tools:listitem="@layout/item_rekomendasi" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
