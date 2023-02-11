@@ -1,160 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Resep.detailActivity">
 
-    <FrameLayout
-        android:id="@+id/framel"
+    <LinearLayout
+        android:id="@+id/backbtndetail"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/back" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fooddetail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:fontFamily="@font/poppinbold"
+        android:text="Jjajangmyeon"
+        android:textAlignment="center"
+        android:textColor="#27231F"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/bookmarkglow"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/tv_fooddetail"
+        android:src="@drawable/bookmarkglow"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/backbtndetail"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:orientation="vertical"
-            android:layout_marginTop="29dp"
-            android:layout_marginLeft="34dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/back"
-                />
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/tv_fooddetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/backbtnkr"
-            android:text="Jjajangmyeon"
-            android:layout_marginTop="27dp"
-            android:textSize="18dp"
-            android:textColor="#27231F"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppinbold"/>
-
-        <ImageView
-            android:id="@+id/bookmarkglow"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/bookmarkglow"
-            android:visibility="invisible"
-            android:layout_toRightOf="@+id/tv_fooddetail"
-            android:layout_marginTop="27dp"
-            android:layout_marginLeft="360dp"/>
-
-        <ImageView
-            android:id="@+id/bookmark"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/bookmark"
-            android:layout_toRightOf="@+id/tv_fooddetail"
-            android:layout_marginTop="27dp"
-            android:layout_marginLeft="360dp"/>
-
-
-    </FrameLayout>
+    <ImageView
+        android:id="@+id/bookmark"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/tv_fooddetail"
+        android:src="@drawable/bookmark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgfooddetail"
-        android:layout_width="370dp"
-        android:layout_height="240dp"
-        android:layout_below="@+id/framel"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/jjajangmyeondetail" />
-    
+        android:src="@drawable/jjajangmyeondetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fooddetail" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/resep"
-        android:layout_width="360dp"
-        android:layout_height="450dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_below="@+id/imgfooddetail"
-        app:cardCornerRadius="15dp">
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgfooddetail">
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/imgfooddetail">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bahan"
-                    android:textSize="15dp"
                     android:fontFamily="@font/poppinbold"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Bahan"
                     android:textColor="#DE0001"
-                    android:layout_marginTop="10dp"
-                    android:paddingLeft="40dp"/>
-
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/bahanrc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/item_bahan"
-                    android:paddingLeft="40dp"
-                    android:nestedScrollingEnabled="false"/>
-
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="@dimen/_15sdp"
+                    tools:listitem="@layout/item_bahan" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mari Masak"
-                    android:textSize="15dp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:fontFamily="@font/poppinbold"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Mari Masak"
                     android:textColor="#DE0001"
-                    android:layout_marginTop="42dp"
-                    android:paddingLeft="40dp"/>
-
+                    android:textSize="@dimen/_13ssp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/marimasakrc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingRight="40dp"
-                    android:paddingLeft="40dp"
-                    android:paddingBottom="20dp"
-                    tools:listitem="@layout/item_marimasak"
-                    android:nestedScrollingEnabled="false"/>
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    tools:listitem="@layout/item_marimasak" />
+
 
             </LinearLayout>
 
-
         </androidx.core.widget.NestedScrollView>
+
 
     </androidx.cardview.widget.CardView>
 
-
     <ImageView
         android:id="@+id/pesanbahanbtn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/resep"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
         android:src="@drawable/pesanbahanbtn"
-        android:layout_below="@+id/resep"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resep" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
