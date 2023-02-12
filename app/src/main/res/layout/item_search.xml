@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
@@ -8,10 +8,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/kartusearch"
-        android:layout_width="370dp"
+        android:layout_width="match_parent"
         android:layout_marginBottom="12dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="20dp"
+        android:layout_height="@dimen/_160sdp"
         app:cardUseCompatPadding="true">
 
         <LinearLayout
@@ -22,19 +21,20 @@
             <ImageView
                 android:id="@+id/pic_food"
                 android:layout_width="match_parent"
-                android:layout_height="162dp"
+                android:layout_height="@dimen/_130sdp"
                 android:scaleType="fitXY"
                 android:src="@drawable/fishandchips"/>
 
             <TextView
                 android:id="@+id/tv_food"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:textAlignment="center"
+                android:gravity="center"
                 android:text="Fish and Chips"
+                android:textSize="@dimen/_12ssp"
                 android:fontFamily="@font/popinregular"
-                android:textColor="#27231F"
-                android:layout_marginTop="4dp"/>
+                android:textColor="#27231F"/>
 
 
         </LinearLayout>

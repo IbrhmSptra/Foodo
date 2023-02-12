@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,38 +8,47 @@
     tools:context=".fragment.fragment_bookmark">
 
     <TextView
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
         android:fontFamily="@font/poppinmedium"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="20dp"
         android:text="Bookmark"
-        android:textSize="20dp"
-        android:textColor="#27231F"/>
+        android:textColor="#27231F"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/bookmarkrc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="19dp"
-            tools:listitem="@layout/item_bookmark"/>
-
-        <TextView
-            android:id="@+id/kosong"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Bookmark Kosong"
-            android:gravity="center"
-            android:visibility="gone"
-            android:paddingBottom="60dp"
-            android:textColor="#27231F"
-            android:fontFamily="@font/poppinslight"/>
-    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookmarkrc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        tools:listitem="@layout/item_bookmark" />
 
 
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/kosong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinslight"
+        android:gravity="center"
+        android:text="Bookmark Kosong"
+        android:textColor="#27231F"
+        android:visibility="gone"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

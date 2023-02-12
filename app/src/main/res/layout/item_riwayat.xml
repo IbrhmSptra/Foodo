@@ -1,63 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/karturiwayat"
-    android:layout_width="370dp"
-    android:layout_height="120dp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
     app:cardUseCompatPadding="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/imgrcriwayat"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
             android:src="@drawable/jjajangmyeondetail"
-            android:scaleType="fitXY"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvrcfood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinmedium"
+            android:text="Dorayaki"
+            android:textColor="#27231F"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgrcriwayat"
+            app:layout_constraintStart_toStartOf="@+id/tv_sukses"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38" />
 
-            <TextView
-                android:id="@+id/tvrcfood"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dorayaki"
-                android:textColor="#27231F"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/poppinmedium"
-                android:paddingLeft="16dp"
-                android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/tv_sukses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvrcfood"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="Transaksi Sukses"
+            android:textColor="#E9C500"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@+id/imgrcriwayat"
+            app:layout_constraintTop_toBottomOf="@+id/tvrcfood" />
 
-            <TextView
-                android:id="@+id/tv_sukses"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transaksi Sukses"
-                android:layout_below="@+id/tvrcfood"
-                android:layout_marginLeft="16dp"
-                android:textSize="11dp"
-                android:textColor="#E9C500"/>
-
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:src="@drawable/ceklis"
-                android:layout_toRightOf="@+id/tv_sukses"
-                android:layout_below="@+id/tvrcfood"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="1dp"/>
+        <ImageView
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_below="@+id/tvrcfood"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/tv_sukses"
+            android:src="@drawable/ceklis"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_sukses"
+            app:layout_constraintStart_toEndOf="@+id/tv_sukses"
+            app:layout_constraintTop_toTopOf="@+id/tv_sukses" />
 
 
-
-
-        </RelativeLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
