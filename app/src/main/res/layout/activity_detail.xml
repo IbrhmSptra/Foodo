@@ -31,7 +31,7 @@
         android:text="Jjajangmyeon"
         android:textAlignment="center"
         android:textColor="#27231F"
-        android:textSize="@dimen/_14ssp"
+        android:textSize="@dimen/_15ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -106,7 +106,7 @@
                     android:paddingLeft="@dimen/_15sdp"
                     android:text="Bahan"
                     android:textColor="#DE0001"
-                    android:textSize="@dimen/_13ssp" />
+                    android:textSize="@dimen/_12ssp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/bahanrc"
@@ -124,7 +124,7 @@
                     android:paddingLeft="@dimen/_15sdp"
                     android:text="Mari Masak"
                     android:textColor="#DE0001"
-                    android:textSize="@dimen/_13ssp" />
+                    android:textSize="@dimen/_12ssp" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/marimasakrc"

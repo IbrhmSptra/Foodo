@@ -7,11 +7,11 @@
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_detailactivity.xml" value="0.1" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_detailkategori.xml" value="0.264" />
-        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_detailriwayat.xml" value="0.11202185792349727" />
+        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_detailriwayat.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_loading.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_pesan.xml" value="0.18981481481481483" />
+        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_pesan.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/activity_splashscreen.xml" value="0.2" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/fragment_bookmark.xml" value="0.264" />
@@ -20,7 +20,7 @@
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/fragment_riwayat.xml" value="0.4" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_bahan.xml" value="0.4" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_bookmark.xml" value="0.4" />
-        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_detailharga.xml" value="0.176" />
+        <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_detailharga.xml" value="0.536" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_kategori.xml" value="0.536" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_kategoridetail.xml" value="0.264" />
         <entry key="..\:/Users/Ibrahim Saputra/AndroidStudioProjects/Foodo/app/src/main/res/layout/item_marimasak.xml" value="0.22826086956521738" />
