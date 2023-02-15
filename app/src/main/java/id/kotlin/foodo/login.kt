@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import id.kotlin.foodo.userAPI.API_akun
 import id.kotlin.foodo.userAPI.API_user
 import id.kotlin.foodo.userAPI.dataUser
 import kotlinx.android.synthetic.main.activity_login.*
@@ -24,10 +26,12 @@ class login : AppCompatActivity() {
     lateinit var btnlogin : Button
     lateinit var btndaftar : TextView
 
+
     //API
     val apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFxbmtlZXV0dGFjeWZjdGdlYnpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk5NTUxNTgsImV4cCI6MTk4NTUzMTE1OH0.ZK9H5UcqMWlrrbbqzEnHVhJbdSi7x5CQRVsdB92Kt8c"
     val token = "Bearer $apikey"
     val api = RetrofitHelper.getInstance().create(API_user::class.java)
+    val apiakun = RetrofitHelper.getInstance().create(API_akun::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,13 +81,15 @@ class login : AppCompatActivity() {
                 var editor = sharedPreference.edit()
                 editor.putString("email", email)
                 editor.commit()
-
-                //get value username dari shared pref
-                val username = sharedPreference.getString("username" , "").toString()
-
                 var email = jsonResponse.getJSONObject("user").get("email").toString()
-                msg = "Successfully login! Hi, $username"
 
+
+                //set pesan welcome
+                val query = "eq.$email"
+                val response = apiakun.get(token = token , apiKey = apikey, query = query)
+                response.body()?.forEach {
+                    msg = "Successfully login! Hi, ${it.username}"
+                }
 
 
 
@@ -105,12 +111,11 @@ class login : AppCompatActivity() {
         }
     }
 
-        private fun goToHome() {
-            val intent = Intent(this, main::class.java)
-            startActivity(intent)
-            finish()
-        }
-
+    private fun goToHome() {
+        val intent = Intent(this, main::class.java)
+        startActivity(intent)
+        finish()
+    }
 
 
 }

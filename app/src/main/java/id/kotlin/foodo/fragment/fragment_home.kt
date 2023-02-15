@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +29,8 @@ import id.kotlin.foodo.recycleviewTrending.API_trending
 import id.kotlin.foodo.recycleviewTrending.dataTrending
 import id.kotlin.foodo.recycleviewTrending.trendingAdapter
 import id.kotlin.foodo.sessionakun
+import id.kotlin.foodo.userAPI.API_akun
+import id.kotlin.foodo.userAPI.dataRegAkun
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -50,12 +53,14 @@ class fragment_home : Fragment() {
     lateinit var rekomendasiAdapter: rekomendasiAdapter
     lateinit var datarekomend : ArrayList<dataRekomendasi>
 
+
     //API
     val apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFxbmtlZXV0dGFjeWZjdGdlYnpjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk5NTUxNTgsImV4cCI6MTk4NTUzMTE1OH0.ZK9H5UcqMWlrrbbqzEnHVhJbdSi7x5CQRVsdB92Kt8c"
     val token = "Bearer $apikey"
     val apikat = RetrofitHelper.getInstance().create(API_kategori::class.java)
     val apirekomend = RetrofitHelper.getInstance().create(API_rekomendasi::class.java)
     val apitrend = RetrofitHelper.getInstance().create(API_trending::class.java)
+    val apiakun = RetrofitHelper.getInstance().create(API_akun::class.java)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,8 +80,17 @@ class fragment_home : Fragment() {
         val sharedPreference =  activity?.getSharedPreferences(
             "app_preference", Context.MODE_PRIVATE
         )
-        val username = sharedPreference?.getString("username" , "").toString()
-        tvuser.text = username
+        val email = sharedPreference?.getString("email" , "").toString()
+
+        CoroutineScope(Dispatchers.Main).launch {
+            val query = "eq.$email"
+            val response = apiakun.get(token = token, apiKey = apikey, query = query)
+            response.body()?.forEach {
+                tvuser.text = it.username
+            }
+        }
+
+
 
         //logout button
         btnlogout.setOnClickListener {
