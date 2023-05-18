@@ -7,11 +7,6 @@ Foodo adalah food application dimana user bisa melihat resep dari berbagai jenis
 ![Logo](https://i.postimg.cc/26PDH1Mc/logo-2.png)
 
 
-## Authors
-
-- Developer : [@IbrhmSptra](https://www.github.com/IbrhmSptra)
-- Design : [@DaffaArya](https://www.instagram.com/daffa_rya/)
-
 
 ## Database Design
 
@@ -51,3 +46,7 @@ Tampilan tersebut adalah Pesan section dari foodo. terdapat rincian harga dan to
 **Lang:** Kotlin
 **BaaS:** Supabase
 
+## Authors
+
+- Developer : [@IbrhmSptra](https://www.github.com/IbrhmSptra)
+- Design : [@DaffaArya](https://www.instagram.com/daffa_rya/)
