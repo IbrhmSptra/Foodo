@@ -1,5 +1,6 @@
 package id.kotlin.foodo.fragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,12 +34,21 @@ class fragment_bookmark : Fragment() {
     //komponen
     lateinit var tvkosong : TextView
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_bookmark, container, false)
+
+        //init shared preference
+        val sharedPreference =  activity?.getSharedPreferences(
+            "app_preference", Context.MODE_PRIVATE
+        )
+        //get user id from shared pref
+        val idUser = sharedPreference?.getString("id_user","").toString()
 
         //komponen
         tvkosong = view.findViewById(R.id.kosong)
@@ -48,7 +58,8 @@ class fragment_bookmark : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(activity , LinearLayoutManager.VERTICAL , false)
         CoroutineScope(Dispatchers.Main).launch {
-            val response = api.get(token = token , apiKey = apikey)
+            val query = "eq.$idUser"
+            val response = api.get(token = token , apiKey = apikey, id_user = query)
             //add data bookmark dari API
             databookmark = ArrayList()
             response.body()?.forEach {
@@ -76,8 +87,15 @@ class fragment_bookmark : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        //init shared preference
+        val sharedPreference =  activity?.getSharedPreferences(
+            "app_preference", Context.MODE_PRIVATE
+        )
+        //get user id from shared pref
+        val idUser = sharedPreference?.getString("id_user","").toString()
         CoroutineScope(Dispatchers.Main).launch {
-            val response = api.get(token = token , apiKey = apikey)
+            val query = "eq.$idUser"
+            val response = api.get(token = token , apiKey = apikey, id_user = query)
             //add data bookmark dari API
             databookmark = ArrayList()
             response.body()?.forEach {

@@ -12,7 +12,6 @@ import android.widget.Toast
 import id.kotlin.foodo.userAPI.API_akun
 import id.kotlin.foodo.userAPI.API_user
 import id.kotlin.foodo.userAPI.dataUser
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -80,8 +79,11 @@ class login : AppCompatActivity() {
 
                 var editor = sharedPreference.edit()
                 editor.putString("email", email)
+                editor.putString("id_user",jsonResponse.getJSONObject("user").get("id").toString())
                 editor.commit()
                 var email = jsonResponse.getJSONObject("user").get("email").toString()
+
+
 
 
                 //set pesan welcome

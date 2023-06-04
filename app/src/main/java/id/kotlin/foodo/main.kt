@@ -15,8 +15,6 @@ class main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //deklarasi sharedd preference
-        val sessionakun = sessionakun(this)
 
         //menyambungkan navigasi (fragment) dengan bottomnavbar
         val bottomnavbar = findViewById<BottomNavigationView>(R.id.bottomNavbar)

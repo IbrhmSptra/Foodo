@@ -4,5 +4,6 @@ data class bookmarkAPI(
     val id : String,
     val food : String,
     val img : String,
-    val imgrc : String
+    val imgrc : String,
+
 )

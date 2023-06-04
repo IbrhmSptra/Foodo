@@ -28,7 +28,6 @@ import id.kotlin.foodo.recycleviewRekomendasi.rekomendasiAdapter
 import id.kotlin.foodo.recycleviewTrending.API_trending
 import id.kotlin.foodo.recycleviewTrending.dataTrending
 import id.kotlin.foodo.recycleviewTrending.trendingAdapter
-import id.kotlin.foodo.sessionakun
 import id.kotlin.foodo.userAPI.API_akun
 import id.kotlin.foodo.userAPI.dataRegAkun
 import kotlinx.coroutines.CoroutineScope
@@ -102,6 +101,7 @@ class fragment_home : Fragment() {
                 var editor = sharedPreference?.edit()
                 editor?.clear()
                 editor?.remove("email")
+                editor?.remove("id_user")
                 editor?.commit()
 
                 //intent ke login

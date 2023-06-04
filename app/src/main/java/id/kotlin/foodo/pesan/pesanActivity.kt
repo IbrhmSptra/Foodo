@@ -1,5 +1,6 @@
 package id.kotlin.foodo.pesan
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -46,6 +47,13 @@ class pesanActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pesan)
 
+        //init shared preference
+        val sharedPreference =  getSharedPreferences(
+            "app_preference", Context.MODE_PRIVATE
+        )
+        //get user id from shared pref
+        val idUser = sharedPreference.getString("id_user","").toString()
+
         //get value yang di intent dari detailActivity
         val food = intent.getStringExtra("food")
         val img = intent.getStringExtra("img")
@@ -74,7 +82,7 @@ class pesanActivity : AppCompatActivity() {
                         harga = it.harga
                 ))
             }
-            //add Arraylist Harga dari API
+            //add Arraylist Harga dari API untuk menghitung total harga dengan sum()
             harga = ArrayList()
             response.body()?.forEach {
                 harga.add(it.harga)
@@ -102,7 +110,7 @@ class pesanActivity : AppCompatActivity() {
             if (alamat.isNullOrEmpty()) {
                 etalamat.error = "Isi Alamat Terlebih Dahulu"
             } else {
-                val data = dataRiwayat(food!! , alamat!! , img!!)
+                val data = dataRiwayat(food!! , alamat!! , img!!, idUser!!)
                 CoroutineScope(Dispatchers.Main).launch {
                     apiriwayat.createriwayat(apiKey = apikey , token = token , data = data)
                 }

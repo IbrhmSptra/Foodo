@@ -12,5 +12,6 @@ interface API_rcriwayat {
     suspend fun get(
         @Header("Authorization") token: String,
         @Header("apikey") apiKey: String,
+        @Query("id_user") id_user : String
     ) : Response<List<rcriwayatAPI>>
 }

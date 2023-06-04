@@ -11,5 +11,6 @@ interface API_bookmark {
     suspend fun get(
         @Header("Authorization") token: String,
         @Header("apikey") apiKey: String,
+        @Query("id_user") id_user : String
     ) : Response<List<bookmarkAPI>>
 }

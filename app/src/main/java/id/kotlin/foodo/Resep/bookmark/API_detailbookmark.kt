@@ -8,6 +8,7 @@ interface API_detailbookmark {
     suspend fun getfoodbookmark(
         @Header("Authorization") token: String,
         @Header("apikey") apiKey: String,
+        @Query("id_user") id_user : String
     ) : Response<List<datafood>>
 
     @POST("/rest/v1/bookmark")

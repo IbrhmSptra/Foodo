@@ -1,5 +1,6 @@
 package id.kotlin.foodo.fragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,12 +43,20 @@ class fragment_riwayat : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_riwayat, container, false)
 
+        //init shared preference
+        val sharedPreference =  activity?.getSharedPreferences(
+            "app_preference", Context.MODE_PRIVATE
+        )
+        //get user id from shared pref
+        val idUser = sharedPreference?.getString("id_user","").toString()
+
         //set recycleview
         recyclerView = view.findViewById(R.id.riwayatrc)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(activity , LinearLayoutManager.VERTICAL , false)
         CoroutineScope(Dispatchers.Main).launch {
-            val response = api.get(token = token , apiKey = apikey)
+            val query = "eq.$idUser"
+            val response = api.get(token = token , apiKey = apikey, id_user = query)
             //add datariwayat dengan API
             datariwayat = ArrayList()
             response.body()?.forEach {

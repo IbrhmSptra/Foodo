@@ -1,5 +1,6 @@
 package id.kotlin.foodo.Resep
 
+import android.content.Context
 import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
@@ -67,6 +68,13 @@ class detailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        //init shared preference
+        val sharedPreference =  getSharedPreferences(
+            "app_preference", Context.MODE_PRIVATE
+        )
+        //get user id from shared pref
+        val id_user = sharedPreference.getString("id_user","").toString()
+
         //get nama food , img food dan imgrckat dari intent
         val food = intent.getStringExtra("food")
         val img = intent.getStringExtra("img")
@@ -95,7 +103,8 @@ class detailActivity : AppCompatActivity() {
 
         //seleksi apakah food sudah pernah di bookmark atau belum kalau sudah langsung glow kalau belum normal
         CoroutineScope(Dispatchers.Main).launch {
-            val response = apibookmark.getfoodbookmark(token = token , apiKey = apikey)
+            val query = "eq.$id_user"
+            val response = apibookmark.getfoodbookmark(token = token , apiKey = apikey, id_user = query)
             //add foodbookmarked dari API
             foodbookmarked = ArrayList()
             response.body()?.forEach {
@@ -130,7 +139,7 @@ class detailActivity : AppCompatActivity() {
             bookmarkglow.isEnabled = true
 
             CoroutineScope(Dispatchers.Main).launch {
-                val data = createbookmark(food = food!!, img = img!! , imgrc = imgrckat!!)
+                val data = createbookmark(food = food!!, img = img!! , imgrc = imgrckat!!, id_user = id_user!!)
                 val response = apibookmark.createbookmark(token = token , apiKey = apikey , data = data)
             }
         }
