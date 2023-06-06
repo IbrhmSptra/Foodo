@@ -18,19 +18,19 @@ Foodo adalah food application dimana user bisa melihat resep dari berbagai jenis
 Tampilan tersebut adalah dimana user akan Login jika sudah punya akun dan daftar jika belum punya akun terdapat juga fitur auth yang disediakan supabase
 
 #### Home
-![home](https://i.postimg.cc/TPxh0YBJ/homepage.png)
+![home](https://i.postimg.cc/TPxh0YBJ/homepage.png)<br />
 Tampilan tersebut adalah halaman utama dari foodo. terdapat botom navbar, slider / carousel dan beberapa card yang terdiri dari trending, kategori dan rekomendasi
 
 #### Kategori
-![kategori section](https://i.postimg.cc/bwmkZnZ2/kategorisection.png)
+![kategori section](https://i.postimg.cc/bwmkZnZ2/kategorisection.png)<br />
 Tampilan tersebut adalah Kategori section dari foodo. terdapat pilihan makanan dari berbagai kategori negara
 
 #### Resep
-![Resep](https://i.postimg.cc/PqZXgsnr/resep.png)
+![Resep](https://i.postimg.cc/PqZXgsnr/resep.png)<br />
 Tampilan tersebut adalah Resep section dari foodo. terdapat penjelasan bahan dan cara membuat berdasarkan makanan yang di klik user
 
 #### Pesan
-![pesan](https://i.postimg.cc/T2NzJ7Bk/pesan.png)
+![pesan](https://i.postimg.cc/T2NzJ7Bk/pesan.png)<br />
 Tampilan tersebut adalah Pesan section dari foodo. terdapat rincian harga dan total bayar sesuai dengan makanan yang dipesan user
 
 
