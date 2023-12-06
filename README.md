@@ -4,8 +4,7 @@
 Foodo adalah food application dimana user bisa melihat resep dari berbagai jenis makanan dengan beberapa kategori yaitu, nusantara, jepang, korea, dan western beserta penjelasan bahan dan langkah untuk memasak makanan yang user inginkan dan juga disediakan fitur "delivery recipe" yaitu user dapat memesan bahan-bahan untuk memasak sesuai dengan menu yang dipilih, dengan pilih menu resep lalu isi alamat dan bayar maka bahan-bahan yang diperlukan untuk memasak akan dikirim ke alamat user.
 
 
-![Logo](https://i.postimg.cc/26PDH1Mc/logo-2.png)
-
+![porto](https://github.com/IbrhmSptra/Foodo/assets/102981991/0272299f-1065-4465-90e2-57311f817fc3)
 
 
 ## Database Design
